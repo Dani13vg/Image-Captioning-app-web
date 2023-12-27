@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Pixtales</title>
-</head>
-<body>
-    <h1>Bienvenido a mi página web</h1>
-    <p>¡Hola mundo!</p>
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+    .form-control {
+      width: 50%; /* Adjust this value as needed to make the inputs narrower */
+      margin: 0 auto; /* This will center the input if it's a block element */
+    }
+</style>
+
+<body class="container-fluid py-5 text-center">
+    <header class="transparent-black-bg">
+        <h1>Welcome to the Image Captioning App</h1>
+    </header>
+        
+    <img src="{{ url_for('static', filename='Pixtales.jpeg') }}" class="logo-image">
+
+    <div class="mt-4">
+        <a href="{{ url_for('register') }}" class="btn btn-secondary">Register</a>
+        <a href="{{ url_for('login') }}" class="btn btn-primary">Log In</a>
+    </div>
 </body>
-</html>
+
+{% endblock %}
+

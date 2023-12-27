@@ -1,26 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Image Captioning App</title>
-</head>
-<body>
-    <h1>Upload an Image for Captioning</h1>
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <ul>
-        {% for message in messages %}
-          <li>{{ message }}</li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    {% endwith %}
-    <form method=post enctype=multipart/form-data>
-        <input type=file name=file>
-        <input type=submit value=Upload>
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Upload an Image</h1>
+    <form action="{{ url_for('upload_image') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/png, image/jpeg">
+        <input type="submit" value="Upload">
     </form>
+
     {% if caption %}
-        <h2>Caption:</h2>
-        <p>{{ caption }}</p>
+        <div>
+            <h2>Your Image:</h2>
+            <img src="{{ image_url }}" alt="Uploaded Image" style="max-width: 300px;">
+            <h2>Caption:</h2>
+            <p>{{ caption }}</p>
+        </div>
     {% endif %}
-</body>
-</html>
+</div>
+{% endblock %}

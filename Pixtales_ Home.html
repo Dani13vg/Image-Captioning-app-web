@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- http://getbootstrap.com/docs/5.1/ -->
+        <link crossorigin="anonymous" href="./Pixtales_ Home_files/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+        <script crossorigin="anonymous" src="./Pixtales_ Home_files/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+
+        <!-- https://favicon.io/emoji-favicons/money-bag/ -->
+        <link href="http://127.0.0.1:5000/static/favicon.ico" rel="icon">
+
+        <link href="./Pixtales_ Home_files/styles.css" rel="stylesheet">
+
+        <title>Pixtales: Home</title>
+
+    </head>
+    
+    <body class="container-fluid py-5 text-center" data-new-gr-c-s-check-loaded="14.1147.0" data-gr-ext-installed="">
+
+        <!-- ... navigation bar ... -->
+
+        
+
+    <header>
+        <h1>Welcome to the Image Captioning App</h1>
+    </header>
+        
+    <div class="login-div">
+        <h1>Register</h1>
+        <form action="http://127.0.0.1:5000/register" method="post">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required="">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required="">
+            </div>
+            <div class="mb-3">
+                <label for="confirmation" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmation" name="confirmation" required="">
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <div>
+            Already have an account? <a href="http://127.0.0.1:5000/login">Log in</a>.
+        </div>
+
+        <br <p="">Upload your images and get instant captions powered by AI.<p></p>
+        <!-- The form for uploading images -->
+        <form action="http://127.0.0.1:5000/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*">
+            <button type="submit" class="btn btn-primary">Upload Image</button>
+        </form>
+    </div>
+
+
+
+
+
+        
+
+    
+</body><!-- ... footer ... --><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

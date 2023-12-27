@@ -5,23 +5,19 @@ header h1 {
     font-weight: 600;
     border-radius: 8px;
     background: transparent;
-    background-image: linear-gradient(to left, #23fa8b, #e3ff0b, #fab20a);
+    background-image: linear-gradient(to left, #3ae805, #efd50e, #ee820e);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    
     backdrop-filter: blur(8px);
-  }
-
-  .transparent-black-bg {
-    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-    color: white; /* Ensures text is light on the dark background */
   }
 
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: url('./background.jpeg') no-repeat center center fixed;
+    background: url('./images/background.jpeg') no-repeat center center fixed;
     background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
     backdrop-filter: blur(5px);
     background-size: cover;
@@ -58,32 +54,10 @@ body, html {
     color: #e0e0e0;
   }
 
-  .form-control {
-    width: 50%; /* Adjust this value as needed to make the inputs narrower */
-    margin: 0 auto; /* This will center the input if it's a block element */
-  }
-
   .register-div {
-    max-width: 500px;
-    margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 2px solid white;
     background: transparent;
     backdrop-filter: blur(8px);
   }
   
-  .logo-image {
-    max-width: 100%; /* Limit image width to its container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Needed to apply auto margins */
-    margin: 0 auto; /* Center the image horizontally */
-  }
-
-  .home-image {
-    max-width: 5%; /* Limit image width to its container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Needed to apply auto margins */
-    margin: 0 auto; /* Center the image horizontally */
-  }
-
-  .custom-paragraph
