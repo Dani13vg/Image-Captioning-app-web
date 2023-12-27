@@ -1,0 +1,37 @@
+/* FILEPATH: /Users/dani/Documents/cs50/Image-Captioning-app-web/static/styles.css */
+
+/* Estilos generales */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Encabezado */
+header {
+    background-color: #00ffbb; /* Verde vivo */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #fff; /* Texto blanco */
+}
+
+/* Contenido principal */
+main {
+    background-color: #ffff00; /* Amarillo vivo */
+    padding: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #00ff9d; /* Verde vivo */
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* Texto blanco */
+}
