@@ -45,9 +45,12 @@ def after_request(response):
     return response
 
 @app.route("/")
-#@login_required
 def index():
     """Show index page"""
+
+    # Forget any user_id
+    session.clear()
+
     return render_template("index.html")
 
 @app.route("/login", methods=["GET", "POST"])
@@ -85,7 +88,7 @@ def login():
 
         # Redirect user to home page
         flash("You have successfully logged in")
-        return redirect("/")
+        return redirect("/upload")
     else:
         return render_template("login.html")
 
@@ -132,6 +135,11 @@ def register():
 def usage():
     """Show usage page"""
     return render_template("usage.html")
+
+@app.route("/contact")
+def contact():
+    """Show contact page"""
+    return render_template("contact.html")
 
 # Route to handle image uploads
 @app.route('/upload', methods=['GET', 'POST'])

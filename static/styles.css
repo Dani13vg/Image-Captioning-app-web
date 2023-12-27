@@ -71,6 +71,15 @@ body, html {
     background: transparent;
     backdrop-filter: blur(8px);
   }
+
+    .login-div {
+        max-width: 500px; /* this is the width of the div */
+        margin: 0 auto; /* this will center the div */
+        border-radius: 10px; /* this will give the div rounded corners */
+        border: 2px solid white; /* this will give the div a 2px white border */
+        background: transparent; /* this will give the div a transparent background */
+        backdrop-filter: blur(8px); /* this will give the div a blur effect */
+    }
   
   .logo-image {
     max-width: 100%; /* Limit image width to its container */
