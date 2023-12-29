@@ -1,5 +1,7 @@
 # PIXTALES: The Image Captioning app web
 
+<img src="https://raw.githubusercontent.com/Dani13vg/Image-Captioning-app-web/main/static/Pixtales.jpeg" alt="PIXTALES: The Image Captioning app web">
+
 #### Video Demo: [URL HERE]
 
 #### Description:
