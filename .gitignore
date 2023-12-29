@@ -8,3 +8,5 @@ flask_session/
 Pixtales_Home_files/
 Pixtales_Home.html
 
+# Desktop Services Store
+.DS_Store
