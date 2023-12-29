@@ -10,8 +10,13 @@ model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-capt
 
 # image captioning
 def caption_image(image_path):
+    """Generate image caption"""
+
+    # Load the image, convert it to RGB and generate caption using the model
     raw_image = Image.open(image_path).convert('RGB')
     inputs = processor(raw_image, return_tensors="pt")
-    out = model.generate(**inputs)
-    return processor.decode(out[0], skip_special_tokens=True)
+    outputs = model.generate(**inputs)
+    caption = processor.decode(outputs[0], skip_special_tokens=True)
+    caption = caption.capitalize() + "." # Capitalize the first letter and add a period
 
+    return caption

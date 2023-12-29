@@ -1,16 +1,14 @@
 {% extends "layout.html" %}
 
+{% block title %} Register {% endblock %}
+
 {% block content %}
 
-<style>
-    .form-control {
-      width: 50%; /* Adjust this value as needed to make the inputs narrower */
-      margin: 0 auto; /* This will center the input if it's a block element */
-    }
-</style>
+<br>
+<br>
 
 <div class="register-div">
-    <h1>Register</h1>
+    <h1>Register </h1>
     <form action="{{ url_for('register') }}" method="post">
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
@@ -27,6 +25,7 @@
         <button type="submit" class="btn btn-primary">Register</button>
     </form>
     <div>
+        <br>
         Already have an account? <a href="{{ url_for('login') }}">Log in</a>.
     </div>
 </div>

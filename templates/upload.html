@@ -1,14 +1,20 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="container">
+
+<br>
+<br>
+
+<div class="upload-div">
     <h1>Upload an Image</h1>
     <form action="{{ url_for('upload_image') }}" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept="image/png, image/jpeg">
-        <input type="submit" value="Upload">
+        <input type="submit" value="Get Caption">
     </form>
 
     {% if caption %}
+        <br>
+        <br>
         <div>
             <h2>Your Image:</h2>
             <img src="{{ image_url }}" alt="Uploaded Image" style="max-width: 300px;">

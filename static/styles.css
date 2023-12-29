@@ -15,6 +15,7 @@ header h1 {
   .transparent-black-bg {
     background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
     color: white; /* Ensures text is light on the dark background */
+    text-align: center; /* Center text */
   }
 
 body, html {
@@ -36,10 +37,10 @@ body, html {
   }
   
   .nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    list-style: none; /* Remove list bullets */
+    display: flex; /* Make the nav links to display inline */
+    justify-content: center; /* Horizontally center the navbar links */
+    align-items: center; /* Center the navbar links vertically */
   }
   
   .nav-links li {
@@ -64,22 +65,34 @@ body, html {
   }
 
   .register-div {
-    max-width: 500px;
-    margin: 0 auto;
-    border-radius: 10px;
-    border: 2px solid white;
-    background: transparent;
-    backdrop-filter: blur(8px);
+    max-width: 500px; /* this is the width of the div */
+    margin: 0 auto; /* this will center the div */
+    border-radius: 10px; /* this will give the div rounded corners */
+    border: 2px solid white; /* this will give the div a 2px white border */
+    background: transparent; /* this will give the div a transparent background */
+    backdrop-filter: blur(8px);  /* this will give the div a blur effect */
+    text-align: center; /* this will center the text in the div */
   }
 
-    .login-div {
-        max-width: 500px; /* this is the width of the div */
-        margin: 0 auto; /* this will center the div */
-        border-radius: 10px; /* this will give the div rounded corners */
-        border: 2px solid white; /* this will give the div a 2px white border */
-        background: transparent; /* this will give the div a transparent background */
-        backdrop-filter: blur(8px); /* this will give the div a blur effect */
-    }
+  .login-div {
+      max-width: 500px; /* this is the width of the div */
+      margin: 0 auto; /* this will center the div */
+      border-radius: 10px; /* this will give the div rounded corners */
+      border: 2px solid white; /* this will give the div a 2px white border */
+      background: transparent; /* this will give the div a transparent background */
+      backdrop-filter: blur(8px); /* this will give the div a blur effect */
+      text-align: center; /* this will center the text in the div */
+  }
+
+  .upload-div {
+    max-width: 500px; /* this is the width of the div */
+    margin: 0 auto; /* this will center the div */
+    border-radius: 10px; /* this will give the div rounded corners */
+    border: 2px solid white; /* this will give the div a 2px white border */
+    background: transparent; /* this will give the div a transparent background */
+    backdrop-filter: blur(8px); /* this will give the div a blur effect */
+    text-align: center; /* this will center the text in the div */
+  }
   
   .logo-image {
     max-width: 100%; /* Limit image width to its container */
@@ -94,5 +107,3 @@ body, html {
     display: block; /* Needed to apply auto margins */
     margin: 0 auto; /* Center the image horizontally */
   }
-
-  .custom-paragraph

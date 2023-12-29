@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %} History {% endblock %}
+
+{% block content %}
+<div class="container">
+    <header class="transparent-black-bg">
+        <h1>History</h1>
+    </header>
+    
+    <div class="transparent-black-bg">
+        <p>This is a list of all the images you have uploaded with their corresponding captions.</p>
+    </div>
+
+    <!-- Show all images of the user with the corresponding caption-->
+    <div class="row">
+        {% for caption in captions %}
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img src="{{ url_for('static', filename=caption.image_path) }}" class="card-img-top" alt="Uploaded Image">
+                    <div class="card-body">
+                        <p class="card-text">{{ caption.caption_text }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

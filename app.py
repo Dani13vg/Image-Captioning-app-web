@@ -7,7 +7,7 @@ from werkzeug.utils import secure_filename
 from model import caption_image
 from transformers import BlipProcessor, BlipForConditionalGeneration
 from PIL import Image
-from helpers import login_required
+from helpers import login_required, get_db_connection, allowed_file
 
 # Configure application
 app = Flask(__name__)
@@ -25,16 +25,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # Load the model
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-large")
 model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-large")
-
-# function to get database connection
-def get_db_connection():
-    conn = sqlite3.connect('users.db')
-    conn.row_factory = sqlite3.Row  # to access columns by name
-    return conn
-
-# Function to check allowed file extensions
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
     
 @app.after_request
 def after_request(response):
@@ -73,7 +63,7 @@ def login():
             return render_template("login.html")
         
         # Query database for username
-        conn = get_db_connection()
+        conn = get_db_connection("users.db")
         user = conn.execute("SELECT * FROM users WHERE username = ?", (request.form.get("username"),)).fetchone()
         conn.close()
 
@@ -110,7 +100,7 @@ def register():
             return render_template("register.html")
         
         # Query database for username
-        conn = get_db_connection()
+        conn = get_db_connection("users.db")
         username = conn.execute("SELECT * FROM users WHERE username = ?", (request.form.get("username"),)).fetchone()
         conn.close()
 
@@ -120,7 +110,7 @@ def register():
             return render_template("register.html")
         
         # Insert new user into database
-        conn = get_db_connection()
+        conn = get_db_connection("users.db")
         conn.execute("INSERT INTO users (username, password) VALUES (?, ?)", (request.form.get("username"), generate_password_hash(request.form.get("password"))))
         conn.commit()
         conn.close()
@@ -141,6 +131,18 @@ def contact():
     """Show contact page"""
     return render_template("contact.html")
 
+@app.route("/history")
+@login_required
+def history():
+    """Show history page"""
+
+    # Query database for captions
+    conn = get_db_connection("users.db")
+    captions = conn.execute("SELECT * FROM captions WHERE user_id = ?", (session["user_id"],)).fetchall()
+    conn.close()
+
+    return render_template("history.html", captions=captions)
+
 # Route to handle image uploads
 @app.route('/upload', methods=['GET', 'POST'])
 @login_required
@@ -152,29 +154,27 @@ def upload_image():
         # Check if the post request has the file part
         if 'file' not in request.files:
             flash('No file part')
-            return redirect(request.url)
+            return redirect(request.url) # redirect to the same url
         
         file = request.files['file']
 
         # If user does not select file, browser also submits an empty part without filename
         if file.filename == '':
             flash('No selected file')
-            return redirect(request.url)
+            return redirect(request.url) # redirect to the same url
         
-        if file and allowed_file(file.filename):
+        # If file is valid, save it to the upload folder
+        if file and allowed_file(file.filename, ALLOWED_EXTENSIONS):
             filename = secure_filename(file.filename)
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
             
-            # Process image for captioning
-            raw_image = Image.open(file_path).convert('RGB')
-            inputs = processor(raw_image, return_tensors="pt")
-            outputs = model.generate(**inputs)
-            caption = processor.decode(outputs[0], skip_special_tokens=True)
+            # Generate caption for the image
+            caption = caption_image(file_path) # defined in model.py
 
             # Store the image path and caption in the database
             user_id = session['user_id']  # Assuming you have user authentication set up
-            conn = get_db_connection()
+            conn = get_db_connection("users.db")
             conn.execute('INSERT INTO captions (user_id, image_path, caption_text) VALUES (?, ?, ?)',
                          (user_id, file_path, caption))
             conn.commit()
