@@ -38,9 +38,6 @@ def after_request(response):
 def index():
     """Show index page"""
 
-    # Forget any user_id
-    session.clear()
-
     return render_template("index.html")
 
 @app.route("/login", methods=["GET", "POST"])
@@ -81,6 +78,17 @@ def login():
         return redirect("/upload")
     else:
         return render_template("login.html")
+    
+@app.route("/logout")
+def logout():
+    """Log user out"""
+
+    # Forget any user_id
+    session.clear()
+
+    # Redirect user to home page
+    flash("You have successfully logged out")
+    return redirect("/")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -184,6 +192,23 @@ def upload_image():
             return render_template('upload.html', caption=caption, image_url=file_path)
 
     return render_template('upload.html')
+
+@app.route("/clear_history", methods=["POST"])
+@login_required
+def clear_history():
+    """Clear the user's history"""
+
+    user_id = session['user_id']
+
+    # Open a new database connection and delete the user's history
+    conn = get_db_connection('users.db')
+    conn.execute("DELETE FROM captions WHERE user_id = ?", (user_id,))
+    conn.commit()
+    conn.close()
+
+    flash("History cleared successfully", "info")
+    return redirect(url_for('history'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)

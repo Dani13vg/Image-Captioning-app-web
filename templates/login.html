@@ -7,7 +7,7 @@
 <br>
 <br>
 
-<div class="login-div">
+<div class="custom-div">
     <h1>Login</h1>
     <form action="{{ url_for('login') }}" method="post">
         <div class="mb-3">
@@ -21,7 +21,8 @@
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
     <div>
-        Don’t have an account? <a href="{{ url_for('register') }}">Register</a>.
+        <br>
+        <span class="gradient-text">Don’t have an account?</span> <a href="{{ url_for('register') }}">Register</a>.
     </div>
 </div>
 {% endblock %}

@@ -5,7 +5,7 @@ header h1 {
     font-weight: 600;
     border-radius: 8px;
     background: transparent;
-    background-image: linear-gradient(to left, #23fa8b, #e3ff0b, #fab20a);
+    background-image: linear-gradient(to left, #23fa8b, #e3ff0b, #fab20a); /* Orange to green gradient */
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -22,7 +22,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: url('./background.jpeg') no-repeat center center fixed;
+    background: url('./background2.webp') no-repeat center center fixed;
     background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
     backdrop-filter: blur(5px);
     background-size: cover;
@@ -64,7 +64,7 @@ body, html {
     margin: 0 auto; /* This will center the input if it's a block element */
   }
 
-  .register-div {
+  .custom-div {
     max-width: 500px; /* this is the width of the div */
     margin: 0 auto; /* this will center the div */
     border-radius: 10px; /* this will give the div rounded corners */
@@ -74,26 +74,20 @@ body, html {
     text-align: center; /* this will center the text in the div */
   }
 
-  .login-div {
-      max-width: 500px; /* this is the width of the div */
-      margin: 0 auto; /* this will center the div */
-      border-radius: 10px; /* this will give the div rounded corners */
-      border: 2px solid white; /* this will give the div a 2px white border */
-      background: transparent; /* this will give the div a transparent background */
-      backdrop-filter: blur(8px); /* this will give the div a blur effect */
-      text-align: center; /* this will center the text in the div */
+  .custom-div h1, .custom-div label{
+    background: linear-gradient(to left, #23fa8b, #e3ff0b, #fab20a); /* Orange to green gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Makes the text itself transparent, showing the background */
   }
 
-  .upload-div {
-    max-width: 500px; /* this is the width of the div */
-    margin: 0 auto; /* this will center the div */
-    border-radius: 10px; /* this will give the div rounded corners */
-    border: 2px solid white; /* this will give the div a 2px white border */
-    background: transparent; /* this will give the div a transparent background */
-    backdrop-filter: blur(8px); /* this will give the div a blur effect */
-    text-align: center; /* this will center the text in the div */
+  .gradient-text {
+    background: linear-gradient(to left, #23fa8b, #e3ff0b, #fab20a); /* Yellow to green gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Makes the text itself transparent, showing the background */
   }
-  
+
   .logo-image {
     max-width: 100%; /* Limit image width to its container */
     height: auto; /* Maintain aspect ratio */

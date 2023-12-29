@@ -4,18 +4,19 @@
 
 {% block content %}
 
-<body class="container-fluid py-5 text-center">
+<div class="container">
     <header class="transparent-black-bg">
         <h1>Welcome to the Image Captioning App</h1>
     </header>
         
     <img src="{{ url_for('static', filename='Pixtales.jpeg') }}" class="logo-image">
 
-    <div class="mt-4">
-        <a href="{{ url_for('register') }}" class="btn btn-secondary">Register</a>
+    <div class="mt-4 d-flex justify-content-center">
+        <a href="{{ url_for('register') }}" class="btn btn-secondary me-3">Register</a>
+        
         <a href="{{ url_for('login') }}" class="btn btn-primary">Log In</a>
     </div>
-</body>
+</div>
 
 {% endblock %}
 
