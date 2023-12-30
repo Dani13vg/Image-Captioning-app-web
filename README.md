@@ -83,13 +83,6 @@ Once entered into the main page of the web app you will find the option to regis
 
 - **Log out**: This option logs the user out and redirects him to the home page. This options only appears after the user has log in.
 
-
-
-### Contributions:
-
-- If you're open to contributions, provide guidelines on how others can contribute to your project.
-- Provide contact information or steps for submitting pull requests or issues.
-
 ### Acknowledgements
 
 This project utilizes BLIP (Bootstrapping Language-Image Pre-training), an innovative model for unified vision-language understanding and generation. I extend my gratitude to the authors Junnan Li, Dongxu Li, Caiming Xiong, and Steven Hoi for their significant contributions to the field of Computer Vision and Pattern Recognition. Their work has been instrumental in the development of this project.
@@ -98,6 +91,8 @@ For more details on BLIP, please refer to their paper:
 
 Junnan Li, Dongxu Li, Caiming Xiong, and Steven Hoi. "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation." arXiv preprint arXiv:2201.12086 (2022). DOI: [10.48550/ARXIV.2201.12086](https://doi.org/10.48550/arxiv.2201.12086). URL: [https://arxiv.org/abs/2201.12086](https://arxiv.org/abs/2201.12086).
 
+
+I would also like to acknowledge the help of my friend Josep Arriaran for his contribution to the style of the web app thanks to his knowledge of css and Bootstrap tools; and his contribution for the testing of the app performance.
 
 ---
 
