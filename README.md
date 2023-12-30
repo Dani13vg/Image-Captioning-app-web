@@ -39,11 +39,11 @@ In this directory you will find the following elements:
 
    - **`model.py`**: This file contains the function used to generate captions for the images and code to test the model.
 
-   - **'users.db`**: This is the database where we store the information of the users and their images with the corresponding captions.
+   - **`users.db`**: This is the database where we store the information of the users and their images with the corresponding captions.
 
    - **`templates`**: This is a folder with the different html files used for the web app.
 
-   - **'static`**: This is a folder with the `styles.css` file containing the CSS configurations to enhance the appearance of the web and some images used for the design and also to test the app.
+   - **`static`**: This is a folder with the `styles.css` file containing the CSS configurations to enhance the appearance of the web and some images used for the design and also to test the app.
 
    - **'.gitignore`**: This file is just a file to avoid tracking files that we don't want to see in the repository, for example __pycache__, .DS_Store and some others.
 
