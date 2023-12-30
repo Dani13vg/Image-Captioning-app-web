@@ -29,8 +29,23 @@ PIXTALES is an innovative web application designed to revolutionize the way we i
    - Once in the directory where the app.py is (the root of this repository), you can use `flask run` or `python app.py` to run the web app.
    - The previous command will show you in the terminal a URL that you can click on to see the web app.
 
-3. **Using the App**: 
-   - Describe how a user can navigate through your app and use its features.
+3. **Content of the directory**: 
+
+In this directory you will find the following elements:
+
+   - **`app.py`**: This is the main script where the application is programmed. It controls everything that happens on the web pages and within the databases.
+
+   - **`helpers`**: This file contains some auxiliary functions to use in the `app.py`.
+
+   - **`model.py`**: This file contains the function used to generate captions for the images and code to test the model.
+
+   - **'users.db`**: This is the database where we store the information of the users and their images with the corresponding captions.
+
+   - **`templates`**: This is a folder with the different html files used for the web app.
+
+   - **'static`**: This is a folder with the `styles.css` file containing the CSS configurations to enhance the appearance of the web and some images used for the design and also to test the app.
+
+   - **'.gitignore`**: This file is just a file to avoid tracking files that we don't want to see in the repository, for example __pycache__, .DS_Store and some others.
 
 ### Technologies Used:
 
@@ -41,9 +56,14 @@ PIXTALES is an innovative web application designed to revolutionize the way we i
 - If you're open to contributions, provide guidelines on how others can contribute to your project.
 - Provide contact information or steps for submitting pull requests or issues.
 
-### Acknowledgements:
+### Acknowledgements
 
-- Credit any resources or individuals that helped you in the development of this project.
+This project utilizes BLIP (Bootstrapping Language-Image Pre-training), an innovative model for unified vision-language understanding and generation. I extend my gratitude to the authors Junnan Li, Dongxu Li, Caiming Xiong, and Steven Hoi for their significant contributions to the field of Computer Vision and Pattern Recognition. Their work has been instrumental in the development of this project.
+
+For more details on BLIP, please refer to their paper:
+
+Junnan Li, Dongxu Li, Caiming Xiong, and Steven Hoi. "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation." arXiv preprint arXiv:2201.12086 (2022). DOI: [10.48550/ARXIV.2201.12086](https://doi.org/10.48550/arxiv.2201.12086). URL: [https://arxiv.org/abs/2201.12086](https://arxiv.org/abs/2201.12086).
+
 
 ---
 
