@@ -22,12 +22,12 @@ PIXTALES is an innovative web application designed to revolutionize the way we i
 ### How to Run the Application:
 
 1. **Setup Environment**: 
-   - Detail the steps for setting up the environment. For example, installing Python, Flask, and any other dependencies.
-   - Mention any environment variables or configurations needed.
+   - You will need to have an environment with python installed(I used version 3.11.5) that must contain the requirements list in the `requirements.txt` file. Some of the requirements are `Flask`, `PyTorch`, `SQL`, `Pillow`, `transformers` and other dependencies.
+   - I recommend using a new environment using only the requirements listed so that there are no conflicts between packages.
 
 2. **Running the App**: 
-   - Provide commands to start the application, e.g., `flask run` or `python app.py`.
-   - Mention the port on which the app runs if applicable.
+   - Once in the directory where the app.py is (the root of this repository), you can use `flask run` or `python app.py` to run the web app.
+   - The previous command will show you in the terminal a URL that you can click on to see the web app.
 
 3. **Using the App**: 
    - Describe how a user can navigate through your app and use its features.
