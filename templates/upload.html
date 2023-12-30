@@ -6,7 +6,7 @@
 <br>
 
 <div class="custom-div">
-    <h1>Upload an Image</h1>
+    <h1 class="gradient-text">Upload an Image</h1>
     <form action="{{ url_for('upload_image') }}" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept="image/png, image/jpeg">
         <input type="submit" value="Get Caption">
@@ -16,10 +16,10 @@
         <br>
         <br>
         <div>
-            <h2>Your Image:</h2>
+            <h2 class="gradient-text">Your Image:</h2>
             <img src="{{ image_url }}" alt="Uploaded Image" style="max-width: 300px;">
-            <h2>Caption:</h2>
-            <p>{{ caption }}</p>
+            <h2 class="gradient-text">Caption:</h2>
+            <p class="gradient-text">{{ caption }}</p>
         </div>
     {% endif %}
 </div>
