@@ -6,14 +6,18 @@
 
 #### Description:
 
-TODO: Write a brief description of your project here. Include key features, functionalities, and what makes your project stand out. You should mention the technologies you used (like Flask, SQLite, etc.), the purpose of the application, and how users can interact with it.
+PIXTALES is an innovative web application designed to revolutionize the way we interact with images. Utilizing cutting-edge AI and deep learning technologies, PIXTALES provides users with the unique ability to generate descriptive captions for their uploaded images.
 
-### Features:
+## Key Features:
 
-- Feature 1: Describe this feature.
-- Feature 2: Describe this feature.
-- Feature 3: Describe this feature.
-- ...
+- **Image Captioning**: Upload any image, and PIXTALES will use advanced AI algorithms to analyze and generate a relevant, descriptive caption. This feature is perfect for enhancing understanding of visual content, particularly useful for visually impaired users.
+
+- **User-Friendly Interface**: Designed with simplicity in mind, our intuitive interface ensures a seamless user experience. Upload images effortlessly and receive instant captions.
+
+- **History Tracking**: Users can view their history of uploaded images along with their generated captions, providing a convenient way to revisit past uploads.
+
+- **Secure and Private**: We prioritize user privacy and data security, ensuring that your images and information are handled with the utmost care.
+
 
 ### How to Run the Application:
 
