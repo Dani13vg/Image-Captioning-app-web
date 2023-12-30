@@ -2,7 +2,8 @@
 
 <img src="https://raw.githubusercontent.com/Dani13vg/Image-Captioning-app-web/main/static/Pixtales.jpeg" alt="PIXTALES: The Image Captioning app web">
 
-#### Video Demo: [URL HERE]
+> [!NOTE]
+> #### Video Demo: [Web App Presentation](https://clipchamp.com/watch/9LT1MF9s5bN)
 
 #### Description:
 
