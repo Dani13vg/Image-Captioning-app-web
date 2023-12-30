@@ -45,11 +45,45 @@ In this directory you will find the following elements:
 
    - **`static`**: This is a folder with the `styles.css` file containing the CSS configurations to enhance the appearance of the web and some images used for the design and also to test the app.
 
-   - **'.gitignore`**: This file is just a file to avoid tracking files that we don't want to see in the repository, for example __pycache__, .DS_Store and some others.
+   - **`.gitignore`**: This file is just a file to avoid tracking files that we don't want to see in the repository, for example __pycache__, .DS_Store and some others.
 
-### Technologies Used:
+## Technologies Used
 
-- Mention any frameworks, libraries, or tools used in your project (like Flask, SQLite, Jinja, etc.).
+PIXTALES leverages a range of modern technologies and frameworks to provide a seamless and efficient user experience. Below is a list of the key technologies employed in this project:
+
+- **Flask**: A lightweight WSGI web application framework in Python, used for building the web server and handling HTTP requests.
+
+- **SQLite**: A C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. It's used for storing user data, including image paths and generated captions.
+
+- **BLIP Model (Salesforce)**: Utilized for image captioning, the BLIP (Bootstrapping Language-Image Pre-training) model from Salesforce represents the state-of-the-art in AI for understanding and generating language descriptions of images.
+
+- **HTML/CSS**: Used for structuring and styling the web application's frontend.
+
+- **JavaScript**: Employed for adding interactive elements to the web pages for an enhanced user experience.
+
+- **Bootstrap**: A front-end framework used to create modern, responsive layouts.
+
+- **Git**: For version control, ensuring efficient management of the codebase and collaboration.
+
+Each of these technologies contributes to the robust functionality of PIXTALES, making it a powerful tool for image captioning and an exemplar of the capabilities of modern web applications.
+
+### Web Usage:
+
+Once entered into the main page of the web app you will find the option to register and login (since you are not registered, you should go to the registered option). You will always see some options in the navigation bar at the top of the page those options are the following:
+
+- **Home**: This option redirects you to the main page.
+
+- **Usage**: This option will provide you some instructions about how to use the web app.
+
+- **Contact Us**: This option will let you some information to know how to contact me.
+
+- **Captioning**: Once this option is selected, you will be prompted for a file (an image in any of this formats: 'png', 'jpg', 'jpeg', 'gif') to generate a caption for it. The user must be log in to access this option.
+
+- **History**: This option leads you to a page where you can see all the images you has uploaded with the corresponding caption.
+
+- **Log out**: This option logs the user out and redirects him to the home page. This options only appears after the user has log in.
+
+
 
 ### Contributions:
 
@@ -67,6 +101,4 @@ Junnan Li, Dongxu Li, Caiming Xiong, and Steven Hoi. "BLIP: Bootstrapping Langua
 
 ---
 
-Remember to replace placeholders (like YOUR PROJECT TITLE, URL HERE, TODO) with your actual project information. If you don't have a video demo, you can omit that part or add it later when you have one. 
 
-The README file is important as it gives visitors and potential users an overview of your project, how to set it up, and how to use it. It's also an excellent place to showcase your work and explain your development process.
