@@ -2,11 +2,12 @@ import requests
 from PIL import Image
 from transformers import BlipProcessor, BlipForConditionalGeneration
 
+# Load the model from Hugging Face Hub 
+# See https://huggingface.co/Salesforce/blip-image-captioning-large for more details
+
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-large")
 model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-large")
 
-#img_url = 'https://storage.googleapis.com/sfr-vision-language-research/BLIP/demo.jpg' 
-#raw_image = Image.open(requests.get(img_url, stream=True).raw).convert('RGB')
 
 # image captioning
 def caption_image(image_path):
@@ -20,3 +21,9 @@ def caption_image(image_path):
     caption = caption.capitalize() + "." # Capitalize the first letter and add a period
 
     return caption
+
+if __name__ == "__main__":
+    # Test the caption_image function
+    image_path = "static/images/dog-puppy-on-garden.jpg"
+    caption = caption_image(image_path)
+    print(caption)
